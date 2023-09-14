@@ -20,7 +20,8 @@ app.get('/',(req,res)=>{
 })
 
 
-app.use('/api/UserAuth', require('./routes/UserAuth'))
+app.use('/api/UserAuth', require('./routes/UserAuth'));
+app.use('/api/AgencyAuth',require('./routes/AgencyAuth'));
 
 
 app.listen(port,()=>{
