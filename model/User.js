@@ -37,23 +37,20 @@ const userSchema = new Schema({
     Address : {
         Address_Line_1 : {
             type : String,
-            required : true
         },
         Address_Line_2 : {
             type : String
         },
         City:{
             type : String,
-            required : true
         },
-        State : {
+        State : {   
             type : String,
-            required : true
         }
     },
-    Linked_Agencies : {
-        type : [String]
-    }
+    Linked_Agencies : [{
+        type : Array
+    }]
 });
 
 User = mongoose.model('User',userSchema);
